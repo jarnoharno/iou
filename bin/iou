@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+var process = require('process');
+var iou = require('../iou');
+
+function usage() {
+  console.log('usage: iou <file>');
+}
+
+function main() {
+  var argv = process.argv.slice(1);
+  if (argv.length < 2) {
+    usage();
+    process.exit(1);
+  }
+  var path = argv[1];
+  var ledger = iou.openLedger(path);
+  process.stdout.write(iou.csvreport(ledger));
+}
+
+main();

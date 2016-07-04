@@ -1,0 +1,17 @@
+{
+  "name": "ioujs",
+  "version": "1.0.0",
+  "description": "Split expenses with iou.js",
+  "main": "iou.js",
+  "bin": {
+    "iou": "./bin/iou"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jarno Leppänen (jarno.leppanen@iki.fi)",
+  "license": "ISC",
+  "dependencies": {
+    "big-rational": "^0.10.5"
+  }
+}
